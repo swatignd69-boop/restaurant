@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking | Pizza Hub</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <h1><a href="index.html">Pizza Hub Express</a></h1>
+  </div>
+
+  <div class="nav-row">
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="booking.html" class="active">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero small-hero">
+  <h2>Reserve Your Table</h2>
+  <p>Enjoy a Royal Dining Experience</p>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="section">
+  <h2>📅 Table Reservation Form</h2>
+
+  <form id="bookingForm" class="booking-form">
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+
+    <label>Select Date</label>
+    <input type="date" id="date" required>
+
+    <label>Select Time</label>
+    <input type="time" id="time" required>
+
+    <label>Number of Guests</label>
+    <select id="guests" required>
+      <option value="">Select Guests</option>
+      <option>1 Person</option>
+      <option>2 People</option>
+      <option>3 People</option>
+      <option>4 People</option>
+      <option>5+ People</option>
+    </select>
+
+    <textarea id="message" rows="4" placeholder="Special Requests (Optional)"></textarea>
+
+    <button type="submit" class="btn">Confirm Booking</button>
+  </form>
+
+  <p id="successMessage" style="display:none; color:green; text-align:center; margin-top:15px;">
+    🎉 Your table has been successfully reserved!
+  </p>
+</section>
+
+<!-- OPENING HOURS -->
+<section class="section dark">
+  <h2>⏰ Opening Hours</h2>
+  <div style="text-align:center;">
+    <p>Monday – Friday: 10:00 AM – 11:00 PM</p>
+    <p>Saturday – Sunday: 9:00 AM – 12:00 AM</p>
+  </div>
+</section>
+
+<!-- PRIVATE EVENTS -->
+<section class="section">
+  <h2>🎉 Private Events & Parties</h2>
+  <p style="max-width:700px;margin:auto;text-align:center;">
+    Planning a birthday, anniversary, or corporate event? 
+    Pizza Hub Express offers private dining spaces with customized menus 
+    and decoration options.
+  </p>
+
+  <div style="text-align:center;margin-top:20px;">
+    <a href="contact.html" class="btn">Contact for Event Booking</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pizza Hub Express | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav').classList.toggle('show');
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const guests = document.getElementById("guests").value;
+
+  if(name && email && phone && date && time && guests){
+    document.getElementById("successMessage").style.display = "block";
+    document.getElementById("bookingForm").reset();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    document.getElementById('nav').classList.remove('show');
+  }
+});
+</script>
+
+</body>
+</html>

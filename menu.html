@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | Pizza Hub</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <h1><a href="index.html">Pizza Hub Express</a></h1>
+  </div>
+  <div class="nav-row">
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="about.html">About</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero small-hero">
+  <h2>Our Delicious Menu</h2>
+  <p>Fresh Ingredients | Premium Taste | Royal Experience</p>
+</section>
+
+<!-- CATEGORY BUTTONS -->
+<section class="section">
+  <div class="category-buttons">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('veg')">Veg</button>
+    <button onclick="filterMenu('nonveg')">Non-Veg</button>
+    <button onclick="filterMenu('drinks')">Drinks</button>
+    <button onclick="filterMenu('dessert')">Desserts</button>
+  </div>
+</section>
+
+<!-- MENU ITEMS -->
+<section class="section">
+<div class="card-container">
+
+  <!-- VEG ITEMS -->
+  <div class="card veg">
+    <img src="https://myfoodstory.com/wp-content/uploads/2021/07/restaurant-style-paneer-butter-masala-2-500x500.jpg">
+    <h3>Paneer Butter Masala <span class="price">₹249</span></h3>
+    <p>Creamy tomato gravy with soft paneer cubes.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card veg">
+    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/veg-biryani-vegetable-biryani.webp">
+    <h3>Veg Biryani <span class="price">₹199</span></h3>
+    <p>Fragrant basmati rice with spices.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card veg">
+    <img src="https://yellowchilis.com/wp-content/uploads/2021/09/white-sauce-pasta-recipe-penne-pasta.jpg">
+    <h3>White Sauce Pasta <span class="price">₹179</span></h3>
+    <p>Italian creamy pasta delight.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <!-- NON VEG -->
+  <div class="card nonveg">
+    <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Instant-Pot-Chicken-Curry-Recipe.jpg">
+    <h3>Chicken Curry <span class="price">₹299</span></h3>
+    <p>Spicy traditional chicken curry.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card nonveg">
+    <img src="https://www.cookwithnabeela.com/wp-content/uploads/2025/01/ChickenBiryani.webp">
+    <h3>Chicken Biryani <span class="price">₹279</span></h3>
+    <p class="badge">Bestseller</p>
+    <p>Hyderabadi style dum biryani.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card nonveg">
+    <img src="https://d1mxd7n691o8sz.cloudfront.net/static/recipe/recipe/2023-05/zesty_grilled_fish-eb90d6bac53e4c61aee512286e8e868f.jpg">
+    <h3>Grilled Fish <span class="price">₹349</span></h3>
+    <p>Freshly grilled with herbs.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <!-- DRINKS -->
+  <div class="card drinks">
+    <img src="https://d3bjzufjcawald.cloudfront.net/public/web/2024-06-03/665d886fe3fd1/Menu_Drinks_500x500_CokeZero-500-500.jpg">
+    <h3>Coca Cola <span class="price">₹49</span></h3>
+    <p>Chilled soft drink.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card drinks">
+    <img src="https://www.mocktaila.com/wp-content/uploads/2025/08/Lucid_Origin_A_tall_clear_glass_filled_with_a_virgin_mojito__f_0-500x500.jpg">
+    <h3>Virgin Mojito <span class="price">₹99</span></h3>
+    <p>Refreshing mint mocktail.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card drinks">
+    <img src="https://www.whiskaffair.com/wp-content/uploads/2021/03/Cold-Coffee-2-3-500x500.jpg">
+    <h3>Cold Coffee <span class="price">₹89</span></h3>
+    <p>Rich creamy cold coffee.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <!-- DESSERT -->
+  <div class="card dessert">
+    <img src="https://5.imimg.com/data5/XH/PC/MY-4155334/chocolate-ice-cream-500x500.jpg">
+    <h3>Chocolate Ice Cream <span class="price">₹79</span></h3>
+    <p>Rich chocolate delight.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+  <div class="card dessert">
+    <img src="https://www.recipessimple.com/wp-content/uploads/2023/08/Chocolate-Brownie-Ice-Cream-Recipe-500x500.jpg">
+    <h3>Brownie with Ice Cream <span class="price">₹129</span></h3>
+    <p>Hot brownie + cold ice cream combo.</p>
+    <button class="btn">Order Now</button>
+  </div>
+
+</div>
+</section>
+
+<footer>
+  <p>© 2026 Pizza Hub Express | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav').classList.toggle('show');
+}
+
+function filterMenu(category) {
+  const items = document.querySelectorAll('.card');
+  items.forEach(item => {
+    if (category === 'all') {
+      item.style.display = 'block';
+    } else {
+      item.style.display = item.classList.contains(category) ? 'block' : 'none';
+    }
+  });
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    document.getElementById('nav').classList.remove('show');
+  }
+});
+</script>
+
+</body>
+</html>
